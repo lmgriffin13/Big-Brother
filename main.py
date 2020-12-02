@@ -7,12 +7,8 @@ st.sidebar.markdown('''Here, you can to select the final year which will be cons
 last_year = st.sidebar.slider("Select the Last Year", first_year, 2020)
 st.sidebar.markdown('''Here, you have the option to select the race of the players you will look at which will be considered in your baseball data''')
 race = st.sidebar.selectbox("Here you may select the race of the players you would like to look at", ['<select>','armenian', 'asian', 'black', 'black/asian', 'hispanic', 'latinx', 'middle eastern', 'pacific islander', 'portuguese', 'unknown', 'white'])
-if race == '<select>':
-    race == ['armenian', 'asian', 'black', 'black/asian', 'hispanic', 'latinx', 'middle eastern', 'pacific islander', 'portuguese', 'unknown', 'white']
 st.sidebar.markdown('''Here, you may select the gender of players to consider''')
 gender = st.sidebar.selectbox("Here you may select the gender of the players you would like to look at", ['male', 'female'])
-if gender == '<select>':
-    gender == ['male', 'female']
 vetos = st.sidebar.slider('Select the number of vetos these players have won', 0, 5)
 hoh = st.sidebar.slider('Select the number of head of households these players have won', 0, 5)
 st.title(f'Big Brother Players Between {first_year} and {last_year}')
@@ -27,7 +23,5 @@ focus = df[just_these_years & just_this_race & just_this_gender & this_many_veto
 years = range( first_year, last_year )
 
 st.write(f'These are the Big Brother Houseguests which fulfill your requests')
-if len(focus)>0:
-    st.write(focus.reset_index( drop=True ))
-else:
-    st.write("No Houseguests fulfill those requirements, adjust and try again")
+st.write(focus.reset_index( drop=True ))
+
