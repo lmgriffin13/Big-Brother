@@ -32,4 +32,4 @@ st.write(f'These are the Big Brother Houseguests which fulfill your requests')
 if len(focus)>0:
     st.write(focus.reset_index( drop=True ))
 else:
-    st.write("No Houseguests fulfill those requesments, adjust and try again")
+    st.write("No Houseguests fulfill those requirements, adjust and try again")
