@@ -15,8 +15,8 @@ st.title(f'Big Brother Players Between {first_year} and {last_year}')
 just_these_years = (df.year >= first_year) & (df.year <= last_year)
 just_this_race = df.oringal_race_ethnicity == race
 just_this_gender = df.gender == gender
-this_many_vetos = df.total_vetos == vetos
-this_many_hoh = df.total_hoh == hoh
+this_many_vetos = df.total_vetos <= vetos
+this_many_hoh = df.total_hoh <= hoh
 focus = df[just_these_years & just_this_race & just_this_gender & this_many_vetos & this_many_hoh]
 
 # Which years do we care about?
