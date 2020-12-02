@@ -24,4 +24,5 @@ years = range( first_year, last_year )
 
 st.write(f'These are the Big Brother Houseguests which fulfill your requests')
 st.write(focus.reset_index( drop=True ))
+st.write(len(focus))
 
