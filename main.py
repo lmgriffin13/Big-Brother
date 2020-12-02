@@ -23,6 +23,8 @@ focus = df[just_these_years & just_this_race & just_this_gender & this_many_veto
 years = range( first_year, last_year )
 
 st.write(f'These are the Big Brother Houseguests which fulfill your requests')
-st.write(focus.reset_index( drop=True ))
-st.write(len(focus))
+if len(focus) >0:
+  st.write(focus[['name', 'final_placement','brand', 'brand_season', 'year', 'age', 'final_eviction_day', 'total_vetos', 'total_hoh', 'total_nominations', 'oringal_race_ethnicity']].reset_index( drop=True ))
+else:
+  st.write("No houseuest fulfill those requirements, adjust and try again.")
 
