@@ -28,7 +28,7 @@ else:
 import matplotlib.pyplot as plt
 plt.hist(focus[['final_placement']], bins = 17)
 plt.gcf().set_size_inches(8,10)
-plt.title( f'Final Place of {gender} {race} Houseguests between {first_year} and {last_year}', fontsize=20 )
+plt.title( f'Final Place of {gender} {race} \n Houseguests between \n{first_year} and {last_year}', fontsize=20 )
 plt.xticks( range(0,18) )
 plt.yticks(range(0,25))
 plt.ylabel( 'Frequency', fontsize=14 )
