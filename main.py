@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-df = pd.read_csv('Big_Brother.csv')
+df = pd.read_csv('Big_Brother_Edited.csv')
 st.sidebar.markdown('''Here, you have the option to select the earliest year of players to consider''')
 first_year = st.sidebar.slider("Select the First Year", 2000, 2020)
 st.sidebar.markdown('''Here, you can to select the final year which will be considered''')
