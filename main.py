@@ -13,17 +13,15 @@ st.sidebar.markdown('''Here, you may select the gender of players to consider'''
 gender = st.sidebar.selectbox("Here you may select the gender of the players you would like to look at", ['male', 'female'])
 if gender == '<select>':
     gender == ['male', 'female']
-placement = st.number_input("Select the place you would like your houseguests to have come in at",1,17,1)
 vetos = st.sidebar.slider('Select the number of vetos these players have won', 0, 5)
 hoh = st.sidebar.slider('Select the number of head of households these players have won', 0, 5)
 st.title(f'Big Brother Players Between {first_year} and {last_year}')
 just_these_years = (df.year >= first_year) & (df.year <= last_year)
 just_this_race = df.oringal_race_ethnicity == race
 just_this_gender = df.gender == gender
-just_these_places = (df.final_placement <= placement_upper) & (df.final_placement >= placement_lower)
 this_many_vetos = df.total_vetos == vetos
 this_many_hoh = df.total_hoh == hoh
-focus = df[just_these_years & just_this_race & just_this_gender & just_these_places & this_many_vetos & this_many_hoh]
+focus = df[just_these_years & just_this_race & just_this_gender & this_many_vetos & this_many_hoh]
 
 # Which years do we care about?
 years = range( first_year, last_year )
