@@ -5,7 +5,7 @@ st.sidebar.markdown('''Here, you have the option to select the earliest year of 
 first_year = st.sidebar.slider("Select the First Year", 2000, 2020)
 st.sidebar.markdown('''Here, you can to select the final year which will be considered''')
 last_year = st.sidebar.slider("Select the Last Year", first_year, 2020)
-race = st.sidebar.selectbox("Here you may select the race of the players you would like to look at", ['<select>','armenian', 'asian', 'black', 'black/asian', 'hispanic', 'latinx', 'middle eastern', 'pacific islander', 'portuguese', 'unknown', 'white']'armenian', 'asian', 'black', 'black/asian', 'hispanic', 'latinx', 'middle eastern', 'pacific islander', 'portuguese', 'unknown', 'white'])
+race = st.sidebar.selectbox("Here you may select the race of the players you would like to look at", ['<select>','armenian', 'asian', 'black', 'black/asian', 'hispanic', 'latinx', 'middle eastern', 'pacific islander', 'portuguese', 'unknown', 'white'])
 if race == '<select>':
   race == ['armenian', 'asian', 'black', 'black/asian', 'hispanic', 'latinx', 'middle eastern', 'pacific islander', 'portuguese', 'unknown', 'white']
 gender = st.sidebar.selectbox("Here you may select the gender of the players you would like to look at", ['<select>','male', 'female'])
