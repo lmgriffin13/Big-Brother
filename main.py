@@ -26,7 +26,7 @@ if len(focus) >0:
 else:
   st.write("No houseuest fulfill those requirements, adjust and try again.")
 import matplotlib.pyplot as plt
-plt.bar(focus[['final_placement']], bins = 17)
+plt.hist(focus[['final_placement']], bins = 17)
 plt.gcf().set_size_inches(8,10)
 plt.title( f'Final Place of {gender} {race} Houseguests between {first_year} and {last_year}', fontsize=20 )
 plt.xticks( range(0,18) )
